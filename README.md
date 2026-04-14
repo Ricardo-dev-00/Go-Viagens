@@ -6,7 +6,7 @@ A ideia foi sair do basico e praticar um projeto mais visual, pensando nao so em
 
 ## Preview
 
-![Preview da landing page Go Viagens](public/images/page-goviagens.png)
+![Preview da landing page Go Viagens](https://github.com/Ricardo-dev-00/Go-Viagens/blob/main/GoViagens/public/images/page-goviagens.png?raw=true)
 
 ## Acesso
 
