@@ -28,20 +28,23 @@ jobs:
         with:
           node-version: 22
           cache: npm
+          cache-dependency-path: GoViagens/package-lock.json
 
       - name: Setup Pages
         uses: actions/configure-pages@v5
 
       - name: Install dependencies
+        working-directory: GoViagens
         run: npm ci
 
       - name: Build project
+        working-directory: GoViagens
         run: npm run build
 
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
         with:
-          path: ./dist
+          path: GoViagens/dist
 
   deploy:
     environment:

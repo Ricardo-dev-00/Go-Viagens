@@ -1,10 +1,11 @@
 import HeroContent from "./HeroContent";
+import { publicAsset } from "../../utils/publicAsset";
 
 function Hero() {
   return (
     <section className="relative flex min-h-[85vh] flex-col items-center justify-center overflow-hidden px-4 py-24 text-white sm:px-6 lg:min-h-screen lg:px-8">
       <img
-        src="/images/hero-bg.webp"
+        src={publicAsset("images/hero-bg.webp")}
         alt=""
         aria-hidden="true"
         fetchPriority="high"

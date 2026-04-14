@@ -1,3 +1,5 @@
+import { publicAsset } from "../../utils/publicAsset";
+
 export const travelCards = [
   {
     id: "africa-intro",
@@ -14,7 +16,7 @@ export const travelCards = [
     tag: "Safári",
     title: "Expedição fotográfica pelas planícies do Quênia",
     location: "Quênia",
-    image: "/images/leao1.webp",
+    image: publicAsset("images/leao1.webp"),
     imageAlt: "Leao em area de safari nas planicies do Quenia",
   },
   {
@@ -32,7 +34,7 @@ export const travelCards = [
     tag: "Vida Selvagem",
     title: "Leões ao amanhecer em reservas privadas",
     location: "Tanzânia",
-    image: "/images/leao2.webp",
+    image: publicAsset("images/leao2.webp"),
     imageAlt: "Leoes ao amanhecer em reserva privada na Tanzania",
   },
   {
@@ -41,7 +43,7 @@ export const travelCards = [
     tag: "Natureza",
     title: "Trilhas silenciosas para observar a fauna local",
     location: "Botsuana",
-    image: "/images/hiena.webp",
+    image: publicAsset("images/hiena.webp"),
     imageAlt: "Fauna local em trilha silenciosa na Botsuana",
   },
   {
@@ -50,7 +52,7 @@ export const travelCards = [
     tag: "Exclusivo",
     title: "Dias de descanso entre golfe e paisagens abertas",
     location: "África do Sul",
-    image: "/images/golf.webp",
+    image: publicAsset("images/golf.webp"),
     imageAlt: "Campo de golfe cercado por paisagens abertas na Africa do Sul",
   },
   {
@@ -59,7 +61,7 @@ export const travelCards = [
     tag: "Romance",
     title: "Viagem a dois com hospedagens e experiências privadas",
     location: "Zanzibar",
-    image: "/images/casal.webp",
+    image: publicAsset("images/casal.webp"),
     imageAlt: "Casal em viagem romantica com experiencia privada em Zanzibar",
   },
   {
@@ -68,7 +70,7 @@ export const travelCards = [
     tag: "Exploração",
     title: "Grandes encontros em cenários selvagens e raros",
     location: "Namíbia",
-    image: "/images/leao3.webp",
+    image: publicAsset("images/leao3.webp"),
     imageAlt: "Cenario selvagem na Namibia com encontro marcante com a fauna",
   },
   {
