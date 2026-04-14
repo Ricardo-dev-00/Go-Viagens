@@ -1,0 +1,29 @@
+@config "../tailwind.config.js";
+@import "tailwindcss";
+
+[data-fade-in] {
+  opacity: 0;
+  transform: translateY(40px);
+  transition:
+    opacity 0.6s ease,
+    transform 0.6s ease;
+  transition-delay: var(--fade-delay, 0s);
+  will-change: opacity, transform;
+}
+
+[data-fade-in][data-visible="true"] {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  [data-fade-in] {
+    opacity: 1;
+    transform: none;
+    transition: none;
+  }
+}
+
+html {
+  scroll-behavior: smooth;
+}
