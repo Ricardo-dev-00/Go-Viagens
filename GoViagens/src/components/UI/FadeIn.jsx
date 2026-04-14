@@ -16,22 +16,49 @@ function FadeIn({ children, delay = 0, className = "" }) {
       return undefined;
     }
 
+    const revealIfNearViewport = () => {
+      const rect = node.getBoundingClientRect();
+      const viewportHeight =
+        window.innerHeight || document.documentElement.clientHeight;
+      const reachedPageBottom =
+        window.innerHeight + window.scrollY >=
+        document.documentElement.scrollHeight - 2;
+
+      if (rect.top <= viewportHeight * 0.95 || reachedPageBottom) {
+        setIsVisible(true);
+        return true;
+      }
+
+      return false;
+    };
+
+    if (revealIfNearViewport()) {
+      return undefined;
+    }
+
     const observer = new IntersectionObserver(
       ([entry]) => {
-        if (entry.isIntersecting) {
+        if (entry.isIntersecting || revealIfNearViewport()) {
           setIsVisible(true);
           observer.unobserve(entry.target);
         }
       },
       {
-        threshold: 0.15,
-        rootMargin: "0px 0px -10% 0px",
+        threshold: 0.05,
+        rootMargin: "0px 0px -5% 0px",
       },
     );
 
     observer.observe(node);
 
-    return () => observer.disconnect();
+    window.addEventListener("scroll", revealIfNearViewport, { passive: true });
+    window.addEventListener("resize", revealIfNearViewport);
+
+    return () => {
+      observer.disconnect();
+      window.removeEventListener("scroll", revealIfNearViewport);
+      window.removeEventListener("resize", revealIfNearViewport);
+    };
   }, [isVisible]);
 
   return (
