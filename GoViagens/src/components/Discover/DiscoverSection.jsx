@@ -4,7 +4,10 @@ import DestinationCard from "./DestinationCard";
 
 function DiscoverSection() {
   return (
-    <section className="mx-auto max-w-6xl px-4 py-16 sm:px-6 lg:px-8 lg:py-20">
+    <section
+      id="planeje-sua-viagem"
+      className="mx-auto max-w-6xl px-4 py-16 sm:px-6 lg:px-8 lg:py-20"
+    >
       {/* TOP */}
       <div className="flex flex-col gap-8 sm:gap-10 lg:flex-row lg:items-start lg:gap-12">
         <FadeIn className="w-full lg:w-1/2">

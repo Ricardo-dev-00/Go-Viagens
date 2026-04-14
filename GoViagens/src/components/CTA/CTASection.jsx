@@ -2,7 +2,7 @@ import FadeIn from "../UI/FadeIn";
 
 function CTASection() {
   return (
-    <section className="px-4 sm:px-6">
+    <section id="consultoria-exclusiva" className="px-4 sm:px-6">
       <div className="mx-auto flex max-w-6xl flex-col gap-8 rounded-4xl bg-primary px-4 py-16 sm:px-6 lg:flex-row lg:items-end lg:justify-between lg:px-8 lg:py-20 shadow-lg">
         {/* TEXTO */}
         <FadeIn>
